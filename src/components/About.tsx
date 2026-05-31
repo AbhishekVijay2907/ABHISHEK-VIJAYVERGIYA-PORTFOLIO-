@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          Aspiring Java Full Stack Developer with strong problem-solving abilities and hands-on experience building modern web applications. Proficient in Java, HTML, CSS, and Python, with foundational knowledge of Spring Boot and databases. Passionate about backend development, API engineering, and creating scalable, user-centric software solutions.
         </p>
       </div>
     </div>

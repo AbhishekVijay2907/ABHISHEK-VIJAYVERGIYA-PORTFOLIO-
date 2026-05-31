@@ -6,6 +6,27 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
+const projects = [
+  {
+    title: "Virtual OS",
+    category: "Java, Spring Boot, MongoDB, JavaScript",
+    tools: "Draggable & resizable multitasking windows, JWT authentication, MongoDB-backed settings, built-in productivity apps.",
+    image: "/images/project-virtualos.webp",
+  },
+  {
+    title: "Employee Management System",
+    category: "Java, Swing, JDBC, MySQL",
+    tools: "Desktop CRUD application, Swing GUI layout, JDBC connection, SQL schema structure, Object-Oriented design principles.",
+    image: "/images/project-ems.webp",
+  },
+  {
+    title: "Amazon Clone",
+    category: "HTML, CSS",
+    tools: "Responsive e-commerce layout replication, customized navbar & banner sections, product listings grids.",
+    image: "/images/project-amazon.webp",
+  }
+];
+
 const Work = () => {
   useGSAP(() => {
   let translateX: number = 0;
@@ -53,21 +74,21 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.title}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={project.image} alt={project.title} />
             </div>
           ))}
         </div>
